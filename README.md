@@ -1,50 +1,52 @@
-# Welcome to your Expo app 👋
+# ☀️ SolLar
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Simulador de Energia Solar Residencial** desenvolvido como projeto da disciplina UPX, com foco na ODS 7 da ONU – Energia Limpa e Acessível.
 
-## Get started
+## 📱 Sobre o App
 
-1. Install dependencies
+O SolLar é um aplicativo mobile que permite ao usuário simular:
+- A geração mensal estimada de energia solar
+- A economia mensal na conta de luz
+- O tempo de retorno sobre o investimento (payback)
+- A redução estimada na emissão de CO₂
 
+Também oferece uma visualização gráfica dos resultados e um modo de realidade aumentada (RA) simples com câmera.
+
+## 🚀 Tecnologias Utilizadas
+
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [React Navigation](https://reactnavigation.org/)
+- [react-native-chart-kit](https://github.com/indiespirit/react-native-chart-kit)
+- [expo-camera](https://docs.expo.dev/versions/latest/sdk/camera/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## 🔧 Como executar o projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/sol-lar.git
+   cd sol-lar
+   ```
+
+2. Instale as dependências:
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. Inicie com Expo:
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. Escaneie o QR code com o app **Expo Go** no seu celular.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🧪 Simulador de RA (Realidade Aumentada)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Para visualizar a simulação de painéis solares sobre a câmera, basta acessar a aba correspondente no app e permitir o uso da câmera.
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 📄 Licença
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Projeto acadêmico sem fins comerciais. Todos os direitos reservados aos autores.

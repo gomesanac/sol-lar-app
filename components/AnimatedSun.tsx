@@ -4,19 +4,19 @@ import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withRepeat,
-  withSequence,
   withTiming,
 } from 'react-native-reanimated';
 
 import { ThemedText } from '@/components/ThemedText';
 
-export function HelloWave() {
+export function AnimatedSun() {
   const rotationAnimation = useSharedValue(0);
 
   useEffect(() => {
     rotationAnimation.value = withRepeat(
-      withSequence(withTiming(25, { duration: 150 }), withTiming(0, { duration: 150 })),
-      4 // Run the animation 4 times
+      withTiming(360, { duration: 8000 }),
+      -1,
+      false
     );
   }, [rotationAnimation]);
 
@@ -26,15 +26,17 @@ export function HelloWave() {
 
   return (
     <Animated.View style={animatedStyle}>
-      <ThemedText style={styles.text}>👋</ThemedText>
+      <ThemedText style={styles.emoji}>☀️</ThemedText>
     </Animated.View>
   );
 }
 
 const styles = StyleSheet.create({
-  text: {
+  emoji: {
     fontSize: 28,
     lineHeight: 32,
     marginTop: -6,
+    textAlign: 'center',
+    textAlignVertical: 'center',
   },
 });
