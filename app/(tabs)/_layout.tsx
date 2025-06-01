@@ -36,20 +36,11 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="simulator"
-        options={{
-          title: 'Siluador',
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="sun.max.fill" color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="reality"
         options={{
           title: 'Realidade Aumentada',
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="info.bubble" color={color} />
+            <IconSymbol size={28} name="sun.max.fill" color={color} />
           ),
         }}
       />

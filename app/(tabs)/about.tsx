@@ -1,7 +1,6 @@
 import { StyleSheet } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
-import { ExternalLink } from '@/components/ExternalLink';
 import PageContainer from '@/components/PageContainer';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
@@ -16,39 +15,55 @@ export default function AboutScreen() {
         O SolLar é um simulador educacional de energia solar residencial que
         permite estimar geração, economia e impacto ambiental.
       </ThemedText>
-      <Collapsible title="Vantagem 1">
+      <ThemedView style={styles.titleContainer}>
+        <ThemedText type="subtitle">Vantagens</ThemedText>
+      </ThemedView>
+      <Collapsible title="Economia na conta de luz">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText>{' '}
-          and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Vantagem 2">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the
-          web version, press <ThemedText type="defaultSemiBold">w</ThemedText>{' '}
-          in the terminal running this project.
+          A energia solar permite uma redução significativa nos gastos com
+          eletricidade, especialmente em regiões com alta incidência solar. Em
+          muitos casos, é possível zerar a fatura mensal.
         </ThemedText>
       </Collapsible>
-      <Collapsible title="Vantagem 3">
+      <Collapsible title="Fonte de energia limpa e renovável">
         <ThemedText>
-          For static images, you can use the{' '}
-          <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to
-          provide files for different screen densities
+          Ao contrário de fontes fósseis, a energia solar não polui e não emite
+          gases de efeito estufa, contribuindo diretamente para a preservação do
+          meio ambiente.
         </ThemedText>
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+      </Collapsible>
+      <Collapsible title="Valorização do imóvel">
+        <ThemedText>
+          Imóveis com sistemas fotovoltaicos instalados tendem a se valorizar no
+          mercado, tornando-se mais atrativos para compradores conscientes e
+          sustentáveis.
+        </ThemedText>
+      </Collapsible>
+      <Collapsible title="Baixa manutenção">
+        <ThemedText>
+          Os sistemas solares exigem pouca manutenção, com vida útil média de 25
+          anos. A limpeza dos painéis a cada 6 meses já garante bom desempenho.
+        </ThemedText>
+      </Collapsible>
+      <Collapsible title="Independência energética">
+        <ThemedText>
+          Com energia solar, o consumidor passa a depender menos das
+          concessionárias e das variações de tarifa, ganhando mais autonomia e
+          previsibilidade de gastos.
+        </ThemedText>
+      </Collapsible>
+      <Collapsible title="Incentivos e financiamentos">
+        <ThemedText>
+          Diversas instituições oferecem linhas de crédito e programas de
+          incentivo para quem deseja instalar sistemas solares, facilitando o
+          investimento.
+        </ThemedText>
+      </Collapsible>
+      <Collapsible title="Aplicável em todo o Brasil">
+        <ThemedText>
+          Graças à alta incidência solar no território nacional, a energia solar
+          é viável em praticamente todas as regiões do país.
+        </ThemedText>
       </Collapsible>
     </PageContainer>
   );

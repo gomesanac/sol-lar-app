@@ -1,10 +1,22 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
-import { Camera } from 'expo-camera';
+import { Button } from '@/components/ui/Button';
+import { Camera, CameraView } from 'expo-camera';
+import React, { useEffect, useRef, useState } from 'react';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
 export default function RealityScreen() {
+  const [painelIndex, setPainelIndex] = useState(0);
   const [hasPermission, setHasPermission] = useState(false);
   const cameraRef = useRef(null);
+
+  const paineis = [
+    require('../../assets/images/solar-panel-1.png'),
+    require('../../assets/images/solar-panel-2.png'),
+    require('../../assets/images/solar-panel-3.png'),
+  ];
+
+  const changePanel = () => {
+    setPainelIndex((prev) => (prev + 1) % paineis.length);
+  };
 
   useEffect(() => {
     (async () => {
@@ -31,17 +43,20 @@ export default function RealityScreen() {
 
   return (
     <View style={styles.container}>
-      <Camera style={styles.camera} ref={cameraRef}>
+      <CameraView style={styles.camera} ref={cameraRef}>
         <View style={styles.overlay}>
           <Image
-            source={{
-              uri: 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Solar_panels_on_a_roof.jpg',
-            }}
+            source={paineis[painelIndex]}
             style={styles.panelImage}
-            resizeMode="contain"
+            accessibilityLabel={`Painel solar modelo ${painelIndex + 1}`}
+            resizeMode='cover'
           />
+          <Text style={styles.legend}>Modelo {painelIndex + 1}</Text>
         </View>
-      </Camera>
+        <View style={styles.buttonContainer}>
+          <Button title="Trocar modelo" onPress={changePanel} />
+        </View>
+      </CameraView>
     </View>
   );
 }
@@ -64,7 +79,25 @@ const styles = StyleSheet.create({
   },
   panelImage: {
     width: '100%',
-    height: '100%',
-    opacity: 0.8,
+    height: undefined,
+    aspectRatio: 1.5,
+    opacity: 0.85,
+    resizeMode: 'contain',
+  },
+  legend: {
+    marginTop: 10,
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#fff',
+    backgroundColor: 'rgba(0,0,0,0.4)',
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  buttonContainer: {
+    position: 'absolute',
+    bottom: 100,
+    width: '100%',
+    alignItems: 'center',
   },
 });
