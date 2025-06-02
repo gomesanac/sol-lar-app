@@ -39,13 +39,11 @@ Também oferece uma visualização gráfica dos resultados e um modo de realidad
    npx expo start
    ```
 
-4. Escaneie o QR code com o app **Expo Go** no seu celular.
+4. Escaneie o QR code com o app [**Expo Go**](https://expo.dev/go) no seu celular.
 
 ## 🧪 Simulador de RA (Realidade Aumentada)
 
 Para visualizar a simulação de painéis solares sobre a câmera, basta acessar a aba correspondente no app e permitir o uso da câmera.
-
----
 
 ## 📄 Licença
 
