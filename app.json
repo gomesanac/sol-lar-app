@@ -37,6 +37,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "741eeb1c-d343-462a-bf66-9e38f6894033"
+      }
+    },
+    "owner": "gomesanac"
   }
 }
