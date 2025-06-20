@@ -13,6 +13,7 @@ const MAPPING = {
   'info.circle.fill': 'info',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
+  'sun.max.fill': 'wb-sunny',
 } as IconMapping;
 
 export function IconSymbol({
